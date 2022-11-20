@@ -55,19 +55,22 @@ const arr = [16,-37,54,-4,72,-56,47,4, -16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12
 
 
 // 5. Знайти кількість непарних позитивних елементів.
-//  const resalt = arr.filter((elem) => (elem % 2 !== 0 && elem > 0));
+
+//  const resalt = arr.filter((elem) => (elem % 2 !== 0 && elem > 0)).length;
 // console.log(resalt);
 
 
 
 
 // 6. Знайти кількість парних позитивних елементів.
-//  const resalt = arr.filter((elem) => (elem % 2 === 0 && elem > 0));
+
+// const resalt = arr.filter((elem) => (elem % 2 === 0 && elem > 0)).length;
 // console.log(resalt);
 
 
 
 // 7. Знайти суму парних позитивних елементів.
+
 // let sum = 0;
 // const resalt = arr.forEach((elem) => {
 //   if(elem % 2 === 0 && elem > 0 ){
@@ -112,17 +115,17 @@ const arr = [16,-37,54,-4,72,-56,47,4, -16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12
 
 // 10. Знайти найбільший серед елементів масиву, ост альні обнулити.
 
-// const max = [...arr].sort((a,b) =>{ 
-//     return a-b;
-// });
-// const maxNamber = max [arr.length -1]
 
-// const result = max.map( (elem) => {
-//   if(elem === maxNamber){
-//     return elem
-//   } else{
-//       return 0
+// const arr1 = arr.reduce((result,elem) => { 
+//    if (elem > result) {
+//     return result = elem
+//    }
+//    return result;
+// });
+
+// for(let i=0; i<= arr.length-1; i++) {
+//   if(!(arr[i] === arr1)) {
+//     arr[i] = 0
 //   }
-// });
-
-// console.log(result);
+// };
+// console.log(arr1, arr);
