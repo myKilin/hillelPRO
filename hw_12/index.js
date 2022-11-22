@@ -56,5 +56,13 @@ let users = [
 "address": "314 Dunne Place, Bawcomville, Guam, 9053"
 }
 ]
-
-const maxCost = 2000;
+const amount = users.reduce((acc,obj)=> {
+        const currentBalance =  parseFloat(obj["balance"].slice(1).replace(",",""));
+        const maxBalance = 2000; 
+        if(currentBalance>maxBalance){
+        console.log( obj["phone"]);
+        }
+        acc= acc + currentBalance;
+        return acc;
+},0)
+console.log(amount);
