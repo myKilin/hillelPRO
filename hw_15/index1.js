@@ -13,8 +13,8 @@ function arrCost(arr) {
 const arrNumber = arrCost(arr);
 for(let i = 0; i < arrNumber.length; i++){
     sum +=arrNumber[i];
-    result = sum/arrNumber.length
-
+    
 };
 
+result = sum/arrNumber.length
 console.log(result);
