@@ -65,7 +65,7 @@ class Human {
 
     addOwner(human) {
         if (human.age < 18) {
-            alert("go back to your mommy because you are not yet 18 years old ")
+            console.warn("go back to your mommy because you are not yet 18 years old ")
             return;
         }
         this.owner = human;
