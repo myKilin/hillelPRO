@@ -10,7 +10,7 @@ const next = document.querySelector('.next')
 
 const image = document.getElementById('image');
 
-function slider() {
+(function(arrDogs, prev, next, image) {
     prev.setAttribute('disabled', "")
     let count = 0;
     let elArrDogs;
@@ -19,7 +19,6 @@ function slider() {
         elArrDogs = arrDogs[count];
         image.src = `./img/${elArrDogs}`
         image.alt = `${elArrDogs.replace('.jpeg', "")}`
-    
         if(count === arrDogs.length-1) {
             next.setAttribute('disabled', "")
         }
@@ -27,7 +26,6 @@ function slider() {
     }
     function left () {
         count--
-    
         elArrDogs = arrDogs[count];
         image.src = `./img/${elArrDogs}`;
         image.alt = `${elArrDogs.replace('.jpeg', "")}`;
@@ -39,5 +37,4 @@ function slider() {
     }
     prev.addEventListener('click', left)
     next.addEventListener('click', right)
-}
-slider()
+})(arrDogs, prev, next, image);
