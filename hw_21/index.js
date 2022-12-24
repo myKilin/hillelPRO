@@ -2,12 +2,12 @@
 
 const ghost = document.querySelector('.ghost');
 const input = document.querySelector('.input');
-ghost.style.opacity = '0';
+ghost.style.visibility = 'visible';
 const showElement = () => {
-    ghost.style.opacity = '1';
+    ghost.style.visibility = 'visible';
 }
 const hideElement = () => {
-    ghost.style.opacity = '0';
+    ghost.style.visibility = 'hidden';
 }
 input.addEventListener('focus', showElement)
 input.addEventListener('blur', hideElement)
